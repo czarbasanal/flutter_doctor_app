@@ -5,22 +5,26 @@ class ProfileIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
+    return Center(
       child: Stack(
-        alignment: Alignment.bottomRight,
+        alignment: const Alignment(1.0, 1.0),
         children: <Widget>[
-          CircleAvatar(
-            radius: 36.0, // Adjust the size of the circle as needed
+          const CircleAvatar(
+            radius: 36.0,
             backgroundColor: Color(0x0fffffff),
-            backgroundImage: AssetImage(
-                'images/Bung-1.png'), // Replace with your image asset
+            backgroundImage: AssetImage('images/Bung-1.png'),
           ),
-          Padding(
-            padding: EdgeInsets.all(8.0), // Adjust the position of the icon
-            child: Icon(
-              Icons.camera_alt, // You can change this to a different icon
-              size: 24.0,
-              color: Colors.white,
+          Container(
+            width: 24,
+            height: 24,
+            decoration: const BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.white, // Set the background color to white
+            ),
+            child: const Icon(
+              Icons.add_a_photo_rounded,
+              size: 18.0,
+              color: Colors.black,
             ),
           ),
         ],

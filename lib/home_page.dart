@@ -11,12 +11,11 @@ class HomePage extends StatelessWidget {
           body: Column(
         children: <Widget>[
           Row(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Icon(
-                Icons.menu, // You can change this to the icon of your choice
+                Icons.menu_rounded,
                 size: 36.0,
-                color: Colors.blue,
+                color: Colors.black,
               ),
               ProfileIcon(),
             ],
