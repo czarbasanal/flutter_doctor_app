@@ -17,6 +17,8 @@ class GridMenu extends StatelessWidget {
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 4,
         childAspectRatio: 1.0,
+        mainAxisSpacing: 8.0,
+        crossAxisSpacing: 5.0,
       ),
       itemCount: icons.length,
       itemBuilder: (context, index) {

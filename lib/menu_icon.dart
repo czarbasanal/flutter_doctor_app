@@ -42,7 +42,7 @@ class MenuIcon extends StatelessWidget {
           ]),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 7.0),
+          padding: const EdgeInsets.only(top: 6.0),
           child: Text(
             label,
             style: GoogleFonts.lato(
