@@ -4,6 +4,7 @@ import 'profile_icon.dart';
 import 'search_bar.dart';
 import 'menu_icon.dart';
 import 'grid_menu.dart';
+import 'doctor_item.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -22,6 +23,7 @@ class HomePage extends StatelessWidget {
                 children: [
                   Image.asset(
                     'images/Icons-Menu-Burger.png',
+                    scale: 2.0,
                   ),
                   const ProfileIcon(imagePath: 'images/Bung-1.png'),
                 ],
@@ -102,7 +104,29 @@ class HomePage extends StatelessWidget {
                     label: 'Surgeon',
                   ),
                 ]),
-              )
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Top Doctors',
+                    style: GoogleFonts.lato(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 18.0,
+                      color: const Color(0xff25282B),
+                    ),
+                  ),
+                  Text(
+                    'View all',
+                    style: GoogleFonts.lato(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 11.0,
+                      color: const Color(0xff4485FD),
+                    ),
+                  ),
+                ],
+              ),
+              const DoctorItem(imgUrl: 'images/austin.png'),
             ],
           ),
         ),
