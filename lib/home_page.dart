@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'profile_icon.dart';
 import 'search_bar.dart';
+import 'menu_icon.dart';
+import 'grid_menu.dart';
 
 class HomePage extends StatelessWidget {
-  HomePage({Key? key}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,15 +17,13 @@ class HomePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Icon(
-                    Icons.menu_rounded,
-                    size: 36.0,
-                    color: Color(0xff25282B),
+                  Image.asset(
+                    'images/Icons-Menu-Burger.png',
                   ),
-                  ProfileIcon(imagePath: 'images/Bung-1.png'),
+                  const ProfileIcon(imagePath: 'images/Bung-1.png'),
                 ],
               ),
               Padding(
@@ -50,6 +50,12 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               SearchBarWidget(onTextChanged: (value) => ''),
+              const MenuIcon(
+                backgroundColor: 0xff4485FD,
+                highlightColor: 0xff639AFF,
+                icon: 'images/007-stethoscope.png',
+                label: 'Consultation',
+              ),
             ],
           ),
         ),
