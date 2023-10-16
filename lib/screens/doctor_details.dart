@@ -21,7 +21,7 @@ class DoctorDetails extends StatelessWidget {
               children: [
                 Image(
                   image: AssetImage(
-                    doctor.imagePath,
+                    doctor.profilePicture,
                   ),
                   fit: BoxFit.cover,
                   width: double.infinity,
@@ -96,7 +96,7 @@ class DoctorDetails extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    doctor.location,
+                    doctor.hospital,
                     style: GoogleFonts.lato(
                       fontWeight: FontWeight.normal,
                       fontSize: 14.0,
@@ -114,7 +114,7 @@ class DoctorDetails extends StatelessWidget {
             Padding(
               padding: EdgeInsets.fromLTRB(24, 0, 24, 0),
               child: Text(
-                doctor.details,
+                doctor.description,
                 style: GoogleFonts.sourceSans3(
                   fontWeight: FontWeight.normal,
                   fontSize: 16.0,
