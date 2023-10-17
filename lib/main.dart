@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_doctor_app/screens/doctor_details.dart';
-import 'screens/home_page.dart';
 import 'models/doctor.dart';
 
 void main() {
