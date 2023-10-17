@@ -59,48 +59,59 @@ class DoctorItem extends StatelessWidget {
                       color: const Color(0xff404345),
                     ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        category,
-                        style: GoogleFonts.lato(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 14.0,
-                          color: const Color(0xffAAAAAA),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 4.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          category,
+                          style: GoogleFonts.lato(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 14.0,
+                            color: const Color(0xffAAAAAA),
+                          ),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 8.0, right: 8.0),
-                        child: Image.asset('images/Ellipse-3.png'),
-                      ),
-                      Text(
-                        hospital,
-                        style: GoogleFonts.lato(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 14.0,
-                          color: const Color(0xffAAAAAA),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8.0, right: 8.0),
+                          child: Image.asset('images/Ellipse-3.png'),
                         ),
-                      ),
-                    ],
+                        Text(
+                          hospital,
+                          style: GoogleFonts.lato(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 14.0,
+                            color: const Color(0xffAAAAAA),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Rating(
-                        index: index,
-                        rating: rating,
-                      ),
-                      Text(
-                        numReviews,
-                        style: GoogleFonts.lato(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 10.0,
-                          color: const Color(0xffAAAAAA),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 8.0),
+                    child: Row(
+                      children: [
+                        Rating(
+                          index: index,
+                          rating: rating,
                         ),
-                      ),
-                      DoctorStatus(status: status),
-                    ],
+                        Padding(
+                          padding: const EdgeInsets.only(left: 4.0),
+                          child: Text(
+                            numReviews,
+                            style: GoogleFonts.lato(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 10.0,
+                              color: const Color(0xffAAAAAA),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 40.0),
+                          child: DoctorStatus(status: status),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
