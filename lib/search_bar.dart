@@ -10,7 +10,7 @@ class SearchBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 327,
+      width: 335,
       height: 56,
       decoration: BoxDecoration(
         color: const Color(0xffF6F6F6),
