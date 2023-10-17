@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'profile_icon.dart';
-import 'search_bar.dart';
-import 'menu_icon.dart';
-import 'grid_menu.dart';
-import 'doctor_item.dart';
+import 'package:flutter_doctor_app/profile_icon.dart';
+import 'package:flutter_doctor_app/search_bar.dart';
+import 'package:flutter_doctor_app/menu_icon.dart';
+import 'package:flutter_doctor_app/grid_menu.dart';
+import 'package:flutter_doctor_app/doctor_item.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -126,7 +126,16 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
-              const DoctorItem(imgUrl: 'images/austin.png'),
+              const DoctorItem(
+                imgUrl: 'images/austin.png',
+                doctorName: 'Dr. Gilang Segara Bening',
+                category: 'Heart',
+                hospital: 'Persahabatan Hospital',
+                index: 3,
+                rating: 4,
+                numReviews: '(1221)',
+                status: true,
+              ),
             ],
           ),
         ),
