@@ -3,11 +3,12 @@ class Doctor {
   final String specialty;
   final String rating;
   final String hospital;
-  final String patientCount;
+  final int patientCount;
   final String experience;
   final String description;
   final String profilePicture;
   final bool isOpen;
+
   Doctor(
       {required this.name,
       required this.specialty,
@@ -26,7 +27,7 @@ var topDoctors = [
       specialty: 'Heart',
       rating: '4.8',
       hospital: 'Persahabatan Hospital',
-      patientCount: '1221',
+      patientCount: 1221,
       experience: '3',
       description:
           'is one of the best doctors in the Persahabat Hospital. He has saved more than 1000 patients in the past 3 years. He has also received many awards from domestic and abroad as the best doctors. He is available on a private or schedule.',
@@ -37,7 +38,7 @@ var topDoctors = [
       specialty: 'Dental',
       rating: '4.7',
       hospital: 'Columbia Asia Hospital',
-      patientCount: '964',
+      patientCount: 964,
       experience: '4',
       description:
           'is one of the best doctors in the Columbia Asia Hospital. He has saved more than 900 patients in the past 4 years. He has also received many awards from domestic and abroad as the best doctors. He is available on a private or schedule.',
@@ -48,7 +49,7 @@ var topDoctors = [
       specialty: 'Eye',
       rating: '4.9',
       hospital: 'Salemba Carolus Hospital',
-      patientCount: '762',
+      patientCount: 762,
       experience: '5',
       description:
           'is one of the best doctors in the Salemba Carolus Hospital. He has saved more than 700 patients in the past 5 years. He has also received many awards from domestic and abroad as the best doctors. He is available on a private or schedule.',
@@ -59,7 +60,7 @@ var topDoctors = [
       specialty: 'Heart',
       rating: '4.8',
       hospital: 'Salemba Carolus Hospital',
-      patientCount: '1451',
+      patientCount: 1451,
       experience: '6',
       description:
           'is one of the best doctors in the Salemba Carolus Hospital. He has saved more than 1400 patients in the past 6 years. He has also received many awards from domestic and abroad as the best doctors. He is available on a private or schedule.',

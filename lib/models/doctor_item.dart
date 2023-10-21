@@ -1,28 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_doctor_app/doctor_status.dart';
-import 'package:flutter_doctor_app/rating.dart';
+import 'package:flutter_doctor_app/models/doctor_status.dart';
+import 'package:flutter_doctor_app/models/rating.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class DoctorItem extends StatelessWidget {
-  final String imgUrl;
+  final String profilePicture;
   final String doctorName;
-  final String category;
+  final String specialty;
   final String hospital;
   final int index;
   final int rating;
-  final String numReviews;
-  final bool status;
+  final int patientCount;
+  final bool isOpen;
 
   const DoctorItem({
     super.key,
-    required this.imgUrl,
+    required this.profilePicture,
     required this.doctorName,
-    required this.category,
+    required this.specialty,
     required this.hospital,
     required this.index,
     required this.rating,
-    required this.numReviews,
-    required this.status,
+    required this.patientCount,
+    required this.isOpen,
   });
 
   @override
@@ -43,7 +43,7 @@ class DoctorItem extends StatelessWidget {
                   color: const Color(0xffEAEAEA),
                 ),
                 child: Image.asset(
-                  imgUrl,
+                  profilePicture,
                   scale: 2.0,
                 )),
             Padding(
@@ -65,7 +65,7 @@ class DoctorItem extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          category,
+                          specialty,
                           style: GoogleFonts.lato(
                             fontWeight: FontWeight.w500,
                             fontSize: 14.0,
@@ -98,7 +98,7 @@ class DoctorItem extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.only(left: 4.0),
                           child: Text(
-                            numReviews,
+                            '(',
                             style: GoogleFonts.lato(
                               fontWeight: FontWeight.w500,
                               fontSize: 10.0,
@@ -106,9 +106,25 @@ class DoctorItem extends StatelessWidget {
                             ),
                           ),
                         ),
+                        Text(
+                          patientCount.toString(),
+                          style: GoogleFonts.lato(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 10.0,
+                            color: const Color(0xffAAAAAA),
+                          ),
+                        ),
+                        Text(
+                          ')',
+                          style: GoogleFonts.lato(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 10.0,
+                            color: const Color(0xffAAAAAA),
+                          ),
+                        ),
                         Padding(
-                          padding: const EdgeInsets.only(left: 40.0),
-                          child: DoctorStatus(status: status),
+                          padding: const EdgeInsets.only(left: 38.0),
+                          child: DoctorStatus(status: isOpen),
                         ),
                       ],
                     ),
