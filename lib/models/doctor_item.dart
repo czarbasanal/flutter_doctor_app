@@ -108,10 +108,7 @@ class DoctorItem extends StatelessWidget {
                             color: const Color(0xffAAAAAA),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 38.0),
-                          child: DoctorStatus(status: doctor.isOpen),
-                        ),
+                        DoctorStatus(status: doctor.isOpen),
                       ],
                     ),
                   ),

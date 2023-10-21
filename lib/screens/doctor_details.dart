@@ -128,7 +128,7 @@ class DoctorDetails extends StatelessWidget {
 
             //Doctor's Stats
             Padding(
-              padding: EdgeInsets.fromLTRB(39, 0, 50, 20),
+              padding: EdgeInsets.fromLTRB(39.0, 0, 40.0, 20.0),
               child: Row(
                 children: [
                   Column(

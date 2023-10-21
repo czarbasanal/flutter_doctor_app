@@ -10,7 +10,7 @@ class Rating extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> displayRating = List.generate(5, (index) {
+    List<Widget> ratingIcon = List.generate(5, (index) {
       return Icon(
         Icons.star,
         color: index < starCount
@@ -20,6 +20,6 @@ class Rating extends StatelessWidget {
       );
     });
 
-    return Row(children: displayRating);
+    return SizedBox(child: Row(children: ratingIcon));
   }
 }

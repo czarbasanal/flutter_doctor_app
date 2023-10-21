@@ -47,7 +47,7 @@ var topDoctors = [
       description:
           'is one of the best doctors in the Columbia Asia Hospital. He has saved more than 900 patients in the past 4 years. He has also received many awards from domestic and abroad as the best doctors. He is available on a private or schedule.',
       profilePicture: 'images/Group-23.png',
-      isOpen: false),
+      isOpen: true),
   Doctor(
       name: 'Dr. Mustakim',
       specialty: 'Eye',
@@ -59,7 +59,7 @@ var topDoctors = [
       description:
           'is one of the best doctors in the Salemba Carolus Hospital. He has saved more than 700 patients in the past 5 years. He has also received many awards from domestic and abroad as the best doctors. He is available on a private or schedule.',
       profilePicture: 'images/Group-24.png',
-      isOpen: true),
+      isOpen: false),
   Doctor(
       name: 'Dr. Suprihatini',
       specialty: 'Heart',
