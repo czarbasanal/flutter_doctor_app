@@ -8,7 +8,7 @@ import 'package:google_fonts/google_fonts.dart';
 class DoctorDetails extends StatelessWidget {
   final Doctor doctor;
 
-  DoctorDetails({required this.doctor});
+  const DoctorDetails({super.key, required this.doctor});
 
   @override
   Widget build(BuildContext context) {
