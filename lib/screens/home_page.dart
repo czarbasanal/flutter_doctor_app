@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_doctor_app/models/doctor_list.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_doctor_app/models/profile_icon.dart';
 import 'package:flutter_doctor_app/models/search_bar.dart';
 import 'package:flutter_doctor_app/models/menu_icon.dart';
 import 'package:flutter_doctor_app/models/grid_menu.dart';
-import 'package:flutter_doctor_app/models/doctor_item.dart';
-import 'package:flutter_doctor_app/models/doctor.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -127,16 +126,10 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
-              DoctorItem(
-                profilePicture: topDoctors[0].profilePicture,
-                doctorName: topDoctors[0].name,
-                specialty: topDoctors[0].specialty,
-                hospital: topDoctors[0].hospital,
-                index: 3,
-                rating: 4,
-                patientCount: topDoctors[0].patientCount,
-                isOpen: true,
-              ),
+              Container(
+                  height: 245,
+                  padding: const EdgeInsets.only(top: 24.0),
+                  child: const DoctorList()),
             ],
           ),
         ),

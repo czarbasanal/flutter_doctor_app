@@ -2,6 +2,7 @@ class Doctor {
   final String name;
   final String specialty;
   final String rating;
+  final int shadedStars;
   final String hospital;
   final int patientCount;
   final String experience;
@@ -13,6 +14,7 @@ class Doctor {
       {required this.name,
       required this.specialty,
       required this.rating,
+      required this.shadedStars,
       required this.hospital,
       required this.patientCount,
       required this.experience,
@@ -26,6 +28,7 @@ var topDoctors = [
       name: 'Dr. Gilang Segara Bening',
       specialty: 'Heart',
       rating: '4.8',
+      shadedStars: 4,
       hospital: 'Persahabatan Hospital',
       patientCount: 1221,
       experience: '3',
@@ -37,6 +40,7 @@ var topDoctors = [
       name: 'Dr. Shabil Chan',
       specialty: 'Dental',
       rating: '4.7',
+      shadedStars: 4,
       hospital: 'Columbia Asia Hospital',
       patientCount: 964,
       experience: '4',
@@ -48,6 +52,7 @@ var topDoctors = [
       name: 'Dr. Mustakim',
       specialty: 'Eye',
       rating: '4.9',
+      shadedStars: 5,
       hospital: 'Salemba Carolus Hospital',
       patientCount: 762,
       experience: '5',
@@ -59,6 +64,7 @@ var topDoctors = [
       name: 'Dr. Suprihatini',
       specialty: 'Heart',
       rating: '4.8',
+      shadedStars: 4,
       hospital: 'Salemba Carolus Hospital',
       patientCount: 1451,
       experience: '6',

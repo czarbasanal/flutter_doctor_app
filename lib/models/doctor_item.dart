@@ -1,28 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_doctor_app/models/doctor.dart';
 import 'package:flutter_doctor_app/models/doctor_status.dart';
 import 'package:flutter_doctor_app/models/rating.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class DoctorItem extends StatelessWidget {
-  final String profilePicture;
-  final String doctorName;
-  final String specialty;
-  final String hospital;
-  final int index;
-  final int rating;
-  final int patientCount;
-  final bool isOpen;
+  final Doctor doctor;
 
   const DoctorItem({
     super.key,
-    required this.profilePicture,
-    required this.doctorName,
-    required this.specialty,
-    required this.hospital,
-    required this.index,
-    required this.rating,
-    required this.patientCount,
-    required this.isOpen,
+    required this.doctor,
   });
 
   @override
@@ -43,7 +30,7 @@ class DoctorItem extends StatelessWidget {
                   color: const Color(0xffEAEAEA),
                 ),
                 child: Image.asset(
-                  profilePicture,
+                  doctor.profilePicture,
                   scale: 2.0,
                 )),
             Padding(
@@ -52,7 +39,7 @@ class DoctorItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    doctorName,
+                    doctor.name,
                     style: GoogleFonts.lato(
                       fontWeight: FontWeight.w600,
                       fontSize: 16.0,
@@ -65,7 +52,7 @@ class DoctorItem extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          specialty,
+                          doctor.specialty,
                           style: GoogleFonts.lato(
                             fontWeight: FontWeight.w500,
                             fontSize: 14.0,
@@ -77,7 +64,7 @@ class DoctorItem extends StatelessWidget {
                           child: Image.asset('images/Ellipse-3.png'),
                         ),
                         Text(
-                          hospital,
+                          doctor.hospital,
                           style: GoogleFonts.lato(
                             fontWeight: FontWeight.w500,
                             fontSize: 14.0,
@@ -92,8 +79,7 @@ class DoctorItem extends StatelessWidget {
                     child: Row(
                       children: [
                         Rating(
-                          index: index,
-                          rating: rating,
+                          starCount: doctor.shadedStars,
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 4.0),
@@ -107,7 +93,7 @@ class DoctorItem extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          patientCount.toString(),
+                          doctor.patientCount.toString(),
                           style: GoogleFonts.lato(
                             fontWeight: FontWeight.w500,
                             fontSize: 10.0,
@@ -124,7 +110,7 @@ class DoctorItem extends StatelessWidget {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 38.0),
-                          child: DoctorStatus(status: isOpen),
+                          child: DoctorStatus(status: doctor.isOpen),
                         ),
                       ],
                     ),

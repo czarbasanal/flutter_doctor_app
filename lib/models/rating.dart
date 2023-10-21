@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 
 class Rating extends StatelessWidget {
-  final int index;
-  final int rating;
+  final int starCount;
 
   const Rating({
     Key? key,
-    required this.index,
-    required this.rating,
+    required this.starCount,
   }) : super(key: key);
 
   @override
@@ -15,8 +13,9 @@ class Rating extends StatelessWidget {
     List<Widget> displayRating = List.generate(5, (index) {
       return Icon(
         Icons.star,
-        color:
-            index < rating ? const Color(0xffFFE848) : const Color(0xffEAEAEA),
+        color: index < starCount
+            ? const Color(0xffFFE848)
+            : const Color(0xffEAEAEA),
         size: 20.0,
       );
     });
