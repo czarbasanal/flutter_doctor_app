@@ -1,18 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_doctor_app/models/doctor.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MenuIcon extends StatelessWidget {
-  final dynamic backgroundColor;
-  final dynamic highlightColor;
-  final dynamic icon;
-  final String label;
+  final DoctorMenu menuIcon;
 
   const MenuIcon({
     super.key,
-    required this.backgroundColor,
-    required this.highlightColor,
-    required this.icon,
-    required this.label,
+    required this.menuIcon,
   });
 
   @override
@@ -25,8 +20,8 @@ class MenuIcon extends StatelessWidget {
             Container(
                 width: 56,
                 height: 56,
-                color: Color(backgroundColor),
-                child: Image.asset(icon)),
+                color: Color(menuIcon.backgroundColor),
+                child: Image.asset(menuIcon.icon)),
             Positioned(
               top: -20,
               left: -20,
@@ -34,7 +29,7 @@ class MenuIcon extends StatelessWidget {
                 width: 38,
                 height: 38,
                 decoration: BoxDecoration(
-                  color: Color(highlightColor),
+                  color: Color(menuIcon.highlightColor),
                   borderRadius: BorderRadius.circular(50.0),
                 ),
               ),
@@ -44,7 +39,7 @@ class MenuIcon extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(top: 6.0),
           child: Text(
-            label,
+            menuIcon.label,
             style: GoogleFonts.lato(
               fontWeight: FontWeight.w400,
               fontSize: 12.0,

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_doctor_app/models/doctor.dart';
+import 'package:flutter_doctor_app/models/menu_icon.dart';
 
 class GridMenu extends StatelessWidget {
-  final List<Widget> icons;
-
-  const GridMenu({super.key, required this.icons});
+  const GridMenu({super.key});
 
   @override
   Widget build(BuildContext context) {
-    if (icons.length != 8) {
+    if (doctorMenu.length != 8) {
       throw ArgumentError('GridIcon requires exactly 8 icons.');
     }
 
@@ -20,9 +20,10 @@ class GridMenu extends StatelessWidget {
         mainAxisSpacing: 8.0,
         crossAxisSpacing: 5.0,
       ),
-      itemCount: icons.length,
+      itemCount: doctorMenu.length,
       itemBuilder: (context, index) {
-        return icons[index];
+        DoctorMenu doctorMenuIcon = doctorMenu[index];
+        return MenuIcon(menuIcon: doctorMenuIcon);
       },
     );
   }

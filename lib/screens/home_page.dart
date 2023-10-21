@@ -3,7 +3,6 @@ import 'package:flutter_doctor_app/models/doctor_list.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_doctor_app/models/profile_icon.dart';
 import 'package:flutter_doctor_app/models/search_bar.dart';
-import 'package:flutter_doctor_app/models/menu_icon.dart';
 import 'package:flutter_doctor_app/models/grid_menu.dart';
 
 class HomePage extends StatelessWidget {
@@ -54,56 +53,7 @@ class HomePage extends StatelessWidget {
               SearchBarWidget(onTextChanged: (value) => ''),
               const Padding(
                 padding: EdgeInsets.only(top: 24.0, bottom: 24.0),
-                child: GridMenu(icons: [
-                  MenuIcon(
-                    backgroundColor: 0xff4485FD,
-                    highlightColor: 0xff639AFF,
-                    icon: 'images/007-stethoscope.png',
-                    label: 'Consultation',
-                  ),
-                  MenuIcon(
-                    backgroundColor: 0xffA584FF,
-                    highlightColor: 0xffB79CFF,
-                    icon: 'images/004-teeth.png',
-                    label: 'Dental',
-                  ),
-                  MenuIcon(
-                    backgroundColor: 0xffFF7854,
-                    highlightColor: 0xffFFA188,
-                    icon: 'images/017-heart.png',
-                    label: 'Heart',
-                  ),
-                  MenuIcon(
-                    backgroundColor: 0xffFEA725,
-                    highlightColor: 0xffFFB547,
-                    icon: 'images/024-clinic.png',
-                    label: 'Hospitals',
-                  ),
-                  MenuIcon(
-                    backgroundColor: 0xff00CC6A,
-                    highlightColor: 0xff1AD37A,
-                    icon: 'images/012-medicine.png',
-                    label: 'Medicines',
-                  ),
-                  MenuIcon(
-                    backgroundColor: 0xff00C9E4,
-                    highlightColor: 0xff05D1ED,
-                    icon: 'images/013-care-2.png',
-                    label: 'Physician',
-                  ),
-                  MenuIcon(
-                    backgroundColor: 0xffFD44B3,
-                    highlightColor: 0xffFF71C6,
-                    icon: 'images/028-bandage.png',
-                    label: 'Skin',
-                  ),
-                  MenuIcon(
-                    backgroundColor: 0xffFD4444,
-                    highlightColor: 0xffFF7070,
-                    icon: 'images/005-syringe.png',
-                    label: 'Surgeon',
-                  ),
-                ]),
+                child: GridMenu(),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

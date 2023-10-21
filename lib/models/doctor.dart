@@ -45,7 +45,7 @@ var topDoctors = [
       patientCount: 964,
       experience: '4',
       description:
-          'is one of the best doctors in the Columbia Asia Hospital. He has saved more than 900 patients in the past 4 years. He has also received many awards from domestic and abroad as the best doctors. He is available on a private or schedule.',
+          'is one of the best doctors in the Columbia Asia Hospital. She has saved more than 900 patients in the past 4 years. She has also received many awards from domestic and abroad as the best doctors. She is available on a private or schedule.',
       profilePicture: 'images/Group-23.png',
       isOpen: true),
   Doctor(
@@ -69,25 +69,72 @@ var topDoctors = [
       patientCount: 1451,
       experience: '6',
       description:
-          'is one of the best doctors in the Salemba Carolus Hospital. He has saved more than 1400 patients in the past 6 years. He has also received many awards from domestic and abroad as the best doctors. He is available on a private or schedule.',
+          'is one of the best doctors in the Salemba Carolus Hospital. She has saved more than 1400 patients in the past 6 years. She has also received many awards from domestic and abroad as the best doctors. He is available on a private or schedule.',
       profilePicture: 'images/Group-25.png',
       isOpen: false),
 ];
 
 class DoctorMenu {
-  String name;
-  String image;
+  final dynamic backgroundColor;
+  final dynamic highlightColor;
+  final dynamic icon;
+  final String label;
 
-  DoctorMenu({this.name = '', this.image = ''});
+  DoctorMenu({
+    required this.backgroundColor,
+    required this.highlightColor,
+    required this.icon,
+    required this.label,
+  });
 }
 
 var doctorMenu = [
-  DoctorMenu(name: 'Consultation', image: 'img-consultation.svg'),
-  DoctorMenu(name: 'Dental', image: 'img-dental.svg'),
-  DoctorMenu(name: 'Heart', image: 'img-heart.svg'),
-  DoctorMenu(name: 'Hospitals', image: 'img-hospital.svg'),
-  DoctorMenu(name: 'Medicines', image: 'img-medicine.svg'),
-  DoctorMenu(name: 'Physician', image: 'img-physician.svg'),
-  DoctorMenu(name: 'Skin', image: 'img-skin.svg'),
-  DoctorMenu(name: 'Surgeon', image: 'img-surgeon.svg'),
+  DoctorMenu(
+    backgroundColor: 0xff4485FD,
+    highlightColor: 0xff639AFF,
+    icon: 'images/007-stethoscope.png',
+    label: 'Consultation',
+  ),
+  DoctorMenu(
+    backgroundColor: 0xffA584FF,
+    highlightColor: 0xffB79CFF,
+    icon: 'images/004-teeth.png',
+    label: 'Dental',
+  ),
+  DoctorMenu(
+    backgroundColor: 0xffFF7854,
+    highlightColor: 0xffFFA188,
+    icon: 'images/017-heart.png',
+    label: 'Heart',
+  ),
+  DoctorMenu(
+    backgroundColor: 0xffFEA725,
+    highlightColor: 0xffFFB547,
+    icon: 'images/024-clinic.png',
+    label: 'Hospitals',
+  ),
+  DoctorMenu(
+    backgroundColor: 0xff00CC6A,
+    highlightColor: 0xff1AD37A,
+    icon: 'images/012-medicine.png',
+    label: 'Medicines',
+  ),
+  DoctorMenu(
+    backgroundColor: 0xff00C9E4,
+    highlightColor: 0xff05D1ED,
+    icon: 'images/013-care-2.png',
+    label: 'Physician',
+  ),
+  DoctorMenu(
+    backgroundColor: 0xffFD44B3,
+    highlightColor: 0xffFF71C6,
+    icon: 'images/028-bandage.png',
+    label: 'Skin',
+  ),
+  DoctorMenu(
+    backgroundColor: 0xffFD4444,
+    highlightColor: 0xffFF7070,
+    icon: 'images/005-syringe.png',
+    label: 'Surgeon',
+  ),
 ];
