@@ -28,16 +28,18 @@ class DoctorDetails extends StatelessWidget {
                   height: 375,
                 ),
                 Positioned(
-                  left: 30,
-                  top: 56,
-                  child: Image(
-                    image: AssetImage(
-                      'images/Icons-Back-1.png',
-                    ),
-                    width: 24,
-                    height: 24,
-                  ),
-                ),
+                    left: 10,
+                    top: 46,
+                    child: IconButton(
+                      icon: Image(
+                        image: AssetImage('images/Icons-Back-1.png'),
+                        width: 24,
+                        height: 24,
+                      ),
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                    )),
                 Positioned(
                   right: 30,
                   top: 56,
@@ -262,7 +264,7 @@ class DoctorDetails extends StatelessWidget {
                   ),
                   SizedBox(width: 16),
                   Container(
-                    width: 255,
+                    width: 264,
                     height: 56,
                     decoration: BoxDecoration(
                       color: Color(0xFF00CC6A),

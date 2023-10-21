@@ -16,7 +16,7 @@ class SlidePageRoute<T> extends MaterialPageRoute<T> {
     ).animate(
       CurvedAnimation(
         parent: animation,
-        curve: Curves.easeInOut,
+        curve: Curves.easeOutCubic,
       ),
     );
 

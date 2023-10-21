@@ -108,7 +108,6 @@ class DoctorItem extends StatelessWidget {
                             color: const Color(0xffAAAAAA),
                           ),
                         ),
-                        DoctorStatus(status: doctor.isOpen),
                       ],
                     ),
                   ),
@@ -117,6 +116,8 @@ class DoctorItem extends StatelessWidget {
             )
           ],
         ),
+        Positioned(
+            top: 56.0, left: 280, child: DoctorStatus(status: doctor.isOpen)),
       ],
     );
   }
